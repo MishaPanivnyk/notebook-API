@@ -3,7 +3,7 @@ const Notebook = require('../models/notebook');
 
 const router = express.Router();
 
-// Получение списка всех ноутбуков
+
 router.get('/', async (req, res) => {
   try {
     const notebooks = await Notebook.find({});
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Добавление нового ноутбука
+
 router.post('/', async (req, res) => {
   const { brand, model, price } = req.body;
 

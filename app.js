@@ -6,7 +6,7 @@ const notebookRoutes = require('./routes/notebookRoutes');
 const app = express();
 const port = 3000; 
 
-// Подключение к базе данных MongoDB
+
 mongoose.connect('mongodb+srv://panivnykm:bSBaHMb3EmSvH5Hs@cluster0.3nzpl4j.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -20,7 +20,7 @@ db.once('open', function () {
 
 app.use(bodyParser.json());
 
-// Подключение маршрутов для ноутбуков
+
 app.use('/notebooks', notebookRoutes);
 
 app.listen(port, () => {
